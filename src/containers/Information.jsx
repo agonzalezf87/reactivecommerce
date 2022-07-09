@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import '../styles/components/Information.css'
 
 const Information = () => {
@@ -24,7 +25,9 @@ const Information = () => {
                     Go back
                 </div>
                 <div className="Information-next">
-                    Pay
+                    <Link to="/payment">
+                        Pay
+                    </Link>
                 </div>
                 <div className="Information-sidebar">
                     <h3>Cart:</h3>
