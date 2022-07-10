@@ -22,7 +22,6 @@ const Checkout = () => {
         <div className="Checkout">
             <div className="Checkout-content">
                 <h3>{cart.length > 0 ? `Cart List:` : `Cart is empty`}</h3>
-                {console.log(cart)}
                 {cart.map((item) => (
                     <div className="Checkout-item" key={item.id}>
                         <div className="Checkout-element">
