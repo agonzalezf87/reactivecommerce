@@ -11,7 +11,7 @@ const Header = () => {
     <div className='Header'>
         <h1 className='Header-title'>
           <Link to="/">
-            Reactive-Commerce
+            ReactivE-Commerce
           </Link></h1>
         <div className='Header-checkout'>
             <Link to="/checkout">
