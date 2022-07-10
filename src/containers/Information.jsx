@@ -1,12 +1,12 @@
 import React, { useRef, useContext } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { AppContext } from '../context/AppContext'
 import '../styles/components/Information.css'
 
-const Information = () => {
+const Information = ({ history }) => {
     const { state, addToBuyer } = useContext(AppContext)
     const form = useRef(null)
-
+    const navigate = useNavigate()
     const { cart } = state
 
     const handleSubmit = () => {
@@ -22,6 +22,7 @@ const Information = () => {
             'phone': formData.get('phone'),
         }
         addToBuyer(buyer)
+        navigate('/checkout/payment')
     }
     
     return (
@@ -49,7 +50,7 @@ const Information = () => {
                         </Link>
                     </div>
                     <div className="Information-next">
-                        <button type='button'>Pay</button>
+                        <button type='button' onClick={handleSubmit}>Pay</button>
                     </div>
                 </div>
             </div>
